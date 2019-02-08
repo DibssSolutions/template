@@ -296,3 +296,37 @@
   height: $size + px
   width: $size + px
   border-radius: 50%
+
+=generate_grid($columns: 12, $sizeXs: false, $sizeSm: false, $sizeMd: false, $sizeLg: false, $padding: 15px)
+  .row
+    margin: 0px -#{$padding}
+    display: flex
+    flex-wrap: wrap
+  [class*='col']
+    padding: 0 $padding
+  @for $i from 1 through $columns
+    $width: percentage($i / $columns)
+    .col-#{$i}
+      flex: 0 0 $width
+      min-width: $width
+    @if($sizeXs)
+      .col-xs-#{$i}
+        +r(550)
+          flex: 0 0 $width
+          min-width: $width
+    @if($sizeSm)
+      .col-sm-#{$i}
+        +r(767)
+          flex: 0 0 $width
+          min-width: $width
+    @if($sizeMd)
+      .col-md-#{$i}
+        +r(1023)
+          flex: 0 0 $width
+          min-width: $width
+    @if($sizeLg)
+      .col-lg-#{$i}
+        +r(1259)
+          flex: 0 0 $width
+          min-width: $width
+
