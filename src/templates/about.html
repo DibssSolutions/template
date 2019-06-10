@@ -1,0 +1,27 @@
+---
+title: About
+---
+{% extends 'layouts/_layout.html' %}
+
+{% block content %}
+	
+	{{ header.block({active: 3}) }}
+	<!-- begin wrap -->
+	<div class="wrap" data-scroll-trigger>
+		<!-- begin about -->
+		<div class="about" data-anim-group="0.2" data-duration-anim="0.6" data-delay-anim="0.15" data-ease-anim="Power2.easeOut">
+			<div class="about__img">
+				<img src="./img/about-img.png" alt="img" data-anim="from-bottom">
+			</div>
+			<h1 class="about__title title-md" data-anim="from-bottom">About Salon</h1>
+			<div class="about__text" data-anim="from-bottom">Amazing amusement and hair care center for kids. Party, eat and cut your hair, all at the same time!</div>
+			<div class="about__footer" data-anim="from-bottom">
+				<a href="#" class="btn btn_simple">Read more</a>
+			</div>
+		</div>
+		<!-- end about -->
+	</div>
+	<!-- end wrap -->
+	{% include './partials/_footer.html' %}
+
+{% endblock %}

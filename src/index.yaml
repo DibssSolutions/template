@@ -3,3 +3,9 @@ ProjectTitle: template
 PageList:
 - file: page.html
   ready: 50
+- file: services.html
+  ready: 50
+- file: about.html
+  ready: 50
+- file: locations.html
+  ready: 50
