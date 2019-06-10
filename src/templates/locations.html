@@ -1,0 +1,76 @@
+---
+title: Location
+---
+{% extends 'layouts/_layout.html' %}
+
+{% block content %}
+	
+	{{ header.block({active: 4}) }}
+	<!-- begin wrap -->
+	<div class="wrap" data-scroll-trigger> 
+		<!-- begin contacts -->
+		<div class="contacts" data-anim-group="0.3" data-delay-anim="0.000001">
+			<div class="contacts__content" data-anim="from-left">
+				<h2 class="contacts__title-md title-md">Locations</h2>
+				<div class="contacts__row">711 Boulevard Curé-Labelle LAVAL, QC H7V2T8</div>
+				<div class="contacts__row">
+					<p>Info@grandeplanete.com</p>
+					<p>+ (450) 973-4696</p>
+				</div>
+			</div>
+			<div class="contacts__form" data-anim="from-right">
+				<form class="form js-form">
+					<div class="form__title">Book appointment</div>
+					<div class="form__row">
+						<div class="form__col">
+							<div class="form-control">
+								<input type="text" placeholder="First name" data-validation="required"
+                    data-validation-error-msg="This field is required">
+							</div>
+						</div>
+						<div class="form__col">
+							<div class="form-control">
+								<input type="text" placeholder="Last name" data-validation="required"
+                    data-validation-error-msg="This field is required">
+							</div>
+						</div>
+					</div>
+					<div class="form-control">
+						<input type="text" placeholder="Phone number" data-validation="required"
+                    data-validation-error-msg="This field is required">
+					</div>
+					<div class="form__row">
+						<div class="form__col">
+							<div class="form-control">
+								<div class="simple-datepicker">
+									<input type="text" class='js-datepicker' readonly placeholder="Select date"> 
+									{{ mixins.icon('arrow') }}
+								</div>
+							</div>
+						</div>
+						<div class="form__col">
+							<div class="form-control">
+								<select class="js-select">
+									<option></option>
+									<option value="10:00">Book Appointment</option>
+									<option value="11:00" disabled="disabled">11:00</option>
+									<option value="12:00">12:00</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="form-control">
+						<textarea placeholder="Appointment Notes"></textarea>
+					</div>
+					<div class="form-control">
+						<button class="btn btn_full btn_color-gray" type="submit">Book Appointment</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- end contacts -->
+	</div>
+	<!-- end wrap -->
+	{% include './partials/_footer-white.html' %}
+
+{% endblock %}
